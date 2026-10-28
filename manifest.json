@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Violet Source",
+  "version": "1.0.0",
+  "description": "Download Chrome extension packages as CRX or ZIP with a clean, focused workflow.",
+  "permissions": ["downloads", "storage", "activeTab"],
+  "host_permissions": [
+    "https://clients2.google.com/*",
+    "https://*.googleusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Violet Source",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

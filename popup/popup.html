@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Violet Source</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span></span></div>
+        <div>
+          <div class="brand-name">violet<span>source</span></div>
+          <div class="brand-subtitle">EXTENSION DOWNLOADER</div>
+        </div>
+      </div>
+      <button class="icon-button" id="themeButton" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.4 8.4 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"/></svg>
+      </button>
+    </header>
+
+    <section class="intro">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> SIMPLE. PRIVATE. DIRECT.</div>
+      <h1>Get the source.<br><span>Keep control.</span></h1>
+      <p>Download a Chrome extension package with one click.</p>
+    </section>
+
+    <section class="download-card" aria-label="Download extension">
+      <label for="extensionUrl">CHROME WEB STORE URL</label>
+      <div class="input-wrap">
+        <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 2.93l-1.72 1.72M14 11a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 21.07l1.72-1.72"/></svg>
+        <input id="extensionUrl" type="url" placeholder="Paste extension link…" spellcheck="false" autocomplete="off">
+        <button id="pasteButton" class="paste-button" type="button">PASTE</button>
+      </div>
+      <div class="id-row">
+        <span>EXTENSION ID</span>
+        <code id="extensionId">Waiting for URL</code>
+      </div>
+      <div class="actions">
+        <button id="downloadCrx" class="download-button secondary" type="button">
+          <span class="file-icon">CRX</span>
+          <span><strong>Download CRX</strong><small>Original package</small></span>
+          <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </button>
+        <button id="downloadZip" class="download-button primary" type="button">
+          <span class="file-icon">ZIP</span>
+          <span><strong>Download ZIP</strong><small>Source files</small></span>
+          <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="progress-track" aria-hidden="true"><div id="progressBar"></div></div>
+      <div class="status-row">
+        <span id="statusDot" class="status-dot"></span>
+        <span id="statusText" role="status" aria-live="polite">Ready when you are.</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span><span class="footer-dot"></span> 1.0.0 </span>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
